@@ -14,6 +14,17 @@
     Countly.track_pageview();
     Countly.track_links();
     Countly.track_scrolls();
+    loadUserData()
   };
   var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(cly, s);
 })();
+
+
+const loadUserData = function() {
+  fetch('https://ipapi.co/json').then(function(response) {return response.json()}).then(function(location) {
+    console.log(location);
+    Countly.q.push(['user_details', {
+      "custom": location,
+    }])
+  })
+}
