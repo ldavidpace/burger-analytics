@@ -6,13 +6,14 @@
   cly.onload = function(){
     Countly.init({
       app_key: "12345",
-      url: `https://webhook-bridge-f5f9m1de3hzh.runkit.sh/eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiJjMGVhYzdlMjk2ZDM0ZTlmODcwYzhlN2I2OTVkNjI3YTpkb21vOjI2NjUzNjg2OCJ9.b0yH1xzKiLK3lsKRSurMlCUQJIdnIx37vknQuhrHP-Y`,
+      url: `https://webhook-bridge-f5f9m1de3hzh.runkit.sh/eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiI5MmJhM2EzZjIwZjk0MWI0YmE2ZmQ2ODg5ZmU4N2UxZTphcHBzdG9yZTo3ODg5Njk2MDUifQ.bnsZwJnJre3QSl6jqmMjFqRqwMRDVMxlErWR6W_HWXA`,
       force_post: true,
       app_version: "0.0.1"
     })
     Countly.track_sessions();
     Countly.track_pageview();
     Countly.track_links();
+    Countly.track_scrolls();
   };
   var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(cly, s);
 })();
