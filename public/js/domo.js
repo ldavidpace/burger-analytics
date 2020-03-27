@@ -14,7 +14,8 @@
     Countly.track_pageview();
     Countly.track_links();
     Countly.track_scrolls();
-    loadUserData()
+    loadUserData();
+    Countly.q.push(['collect_from_forms']);
   };
   var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(cly, s);
 })();
