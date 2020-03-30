@@ -23,6 +23,7 @@
 const loadUserData = function() {
   fetch('https://ipapi.co/json').then(function(response) {return response.json()}).then(function(location) {
     console.log(location);
+    location.referrer = document.referrer;
     Countly.q.push(['user_details', {
       "custom": location,
     }])
